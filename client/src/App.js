@@ -1,17 +1,35 @@
 import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter, Route, Routes, Link} from "react-router-dom";
+import {Button} from '@mui/material';
+
+function About() {
+  return (
+    <h2>Learn Employability Competencies</h2>
+  );
+}
+
+function Home() {
+  return (
+    <h2>Employability Competencies</h2>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+      <div>
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit
-        </p>
-      
-      </header>
-    </div>
+        <BrowserRouter>
+          <Link to="/"><Button variant='contained'>Home</Button></Link>
+          <Link to="/about"><Button variant='outlined'>About</Button></Link>
+          <br/>
+          <h1>Essential Employability Competencies</h1>
+          <Routes>
+            <Route path="/" Component={Home}/>
+            <Route path="/about" Component={About}/>
+          </Routes>
+        </BrowserRouter>
+      </div>
   );
 }
 
