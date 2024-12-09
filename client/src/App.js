@@ -2,11 +2,13 @@ import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter, Route, Routes, Link} from "react-router-dom";
 import {Button} from "@mui/material";
+import SelectSkill from "./Components/SelectSkill";
 
 function About() {
-  return (
+  return (<>
     <h2>Learn Employability Competencies</h2>
-  );
+    <SelectSkill/>
+  </>);
 }
 
 function Home() {
