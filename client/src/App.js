@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter, Route, Routes, Link} from "react-router-dom";
 import {Button} from '@mui/material';
+import SelectSkill from './Components/SelectSkill';
 
 function About() {
   return (
@@ -11,7 +12,10 @@ function About() {
 
 function Home() {
   return (
-    <h2>Employability Competencies</h2>
+    <div>
+      <h2>Employability Competencies</h2>
+      <SelectSkill/>
+    </div>
   );
 }
 
